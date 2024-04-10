@@ -9,7 +9,7 @@ func Capitalize(s string) string {
 	}
 	for r, n := range runes {
 		if n >= 97 && n <= 122 && r != 0 {
-			if (runes[r-1] < 65 || runes[r-1] > 90) && (runes[r-1] < 97 || runes[r-1] > 122) && (runes[r-1] < 0 || runes[r-1] > 9) {
+			if (runes[r-1] < 65 || runes[r-1] > 90) && (runes[r-1] < 97 || runes[r-1] > 122) && (runes[r-1] < '0' || runes[r-1] > '9') {
 				runes[r] = n - 32
 			}
 		} else if r == 0 && n >= 97 && n <= 122 {
