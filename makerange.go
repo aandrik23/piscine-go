@@ -12,5 +12,4 @@ func MakeRange(min, max int) []int {
 		index++
 	}
 	return answer
-
 }
