@@ -6,10 +6,12 @@ import (
 	"github.com/01-edu/z01"
 )
 
+// test comment
 func main() {
-	i := []rune(os.Args[0])
-	for _, j := range i {
-		z01.PrintRune(j)
+	appname := os.Args[0][2:]
+
+	for _, char := range appname {
+		z01.PrintRune(rune(char))
 	}
 	z01.PrintRune('\n')
 }
