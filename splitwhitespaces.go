@@ -58,7 +58,6 @@ func wordlen(s string) int {
 		if space(byte(v)) {
 			count++
 		}
-
 	}
 	return count
 }
@@ -70,4 +69,3 @@ func strlen(s string) int {
 	}
 	return count
 }
-
