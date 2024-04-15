@@ -28,6 +28,7 @@ func main() {
 		printStr("I have an odd number of arguments")
 	}
 }
+
 func lengthOfArg(arr []string) int {
 	lens := 0
 	for range arr {
