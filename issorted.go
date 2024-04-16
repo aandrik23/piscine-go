@@ -30,7 +30,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 		if f(a[i-1], a[i]) == 0 {
 			sortedDesc = true
-			sortedAsc = true
+			sortedAsc = true //
 		}
 	}
 	return sortedAsc || sortedDesc
