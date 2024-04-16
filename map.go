@@ -1,7 +1,6 @@
 package piscine
 
 func Map(f func(int) bool, a []int) []bool {
-
 	lens := 0
 	for range a {
 		lens++
