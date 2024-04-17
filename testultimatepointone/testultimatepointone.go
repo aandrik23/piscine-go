@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"piscine"
 )
+
 func main() {
 	a := 0
 	b := &a
