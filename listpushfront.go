@@ -11,7 +11,7 @@ type List struct {
 }
 
 func ListPushFront(l *List, data interface{}) {
-	n := &NodeL{Data:data}
+	n := &NodeL{Data: data}
 
 	if l.Head == nil {
 		l.Head = n
