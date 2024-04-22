@@ -9,10 +9,10 @@ func ListAt(l *NodeL, pos int) *NodeL {
 	if l == nil {
 		return nil
 	}
-		current := l
-		for i := 0; i < pos; i++ {
+	current := l
+	for i := 0; i < pos; i++ {
 		if current.Next == nil {
-		return nil
+			return nil
 		}
 		current = current.Next
 	}
