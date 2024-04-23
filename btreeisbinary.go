@@ -1,27 +1,17 @@
 package piscine
 
-import (
-	"math"
-	"strconv"
-)
-
 func BTreeIsBinary(root *TreeNode) bool {
-	return isBST(root, math.MinInt64, math.MaxInt64)
+	return isBST(root, nil, nil)
 }
 
-func isBST(node *TreeNode, min, max int) bool {
+func isBST(node *TreeNode, min, max *TreeNode) bool {
 	if node == nil {
 		return true
 	}
 
-	nodeValue, err := strconv.Atoi(node.Data)
-	if err != nil {
+	if (min != nil && node.Data <= min.Data) || (max != nil && node.Data >= max.Data) {
 		return false
 	}
 
-	if nodeValue <= min || nodeValue >= max {
-		return false
-	}
-
-	return isBST(node.Left, min, nodeValue) && isBST(node.Right, nodeValue, max)
+	return isBST(node.Left, min, node) && isBST(node.Right, node, max)
 }
