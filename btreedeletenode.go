@@ -1,0 +1,28 @@
+package piscine
+
+func BTreeDeleteNode(root, node *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+	}
+
+	if node.Left == nil {
+		return BTreeTransplant(root, node, node.Right)
+	}
+
+	if node.Right == nil {
+		return BTreeTransplant(root, node, node.Left)
+	}
+
+	successor := BTreeMin(node.Right)
+	if successor.Parent != node {
+		root = BTreeTransplant(root, successor, successor.Right)
+		successor.Right = node.Right
+		successor.Right.Parent = successor
+	}
+
+	root = BTreeTransplant(root, node, successor)
+	successor.Left = node.Left
+	successor.Left.Parent = successor
+
+	return root
+}
