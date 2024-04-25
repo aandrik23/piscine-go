@@ -1,8 +1,8 @@
 package piscine
 
 func Atoi(s string) int {
-	a := 0
 	sign := 1
+	a := 0
 	count := 0
 	for i, v := range s {
 		if v == '-' || v == '+' {
@@ -16,7 +16,7 @@ func Atoi(s string) int {
 			return 0
 		}
 		b := 0
-		for k := '1'; k < v; k++ {
+		for k := '1'; k <= v; k++ {
 			b++
 		}
 		a = a*10 + b
