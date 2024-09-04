@@ -2,12 +2,12 @@ package piscine
 
 func BasicAtoi2(s string) int {
 	a := 0
-	for _, v := range s {
+	for _, i := range s {
 		b := 0
-		if v < '0' || v > '9' {
+		if i < '0' || i > '9' {
 			return 0
 		}
-		for i := '1'; i <= v; i++ {
+		for k := '1'; k <= i; k++ {
 			b++
 		}
 		a = a*10 + b
